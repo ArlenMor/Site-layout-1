@@ -15,6 +15,10 @@ h1, h2, h3, h4, h5 ,h6, p{
     padding: 0;
     margin: 0;
 }
+img{
+    display: block;
+    max-width: 100%;
+}
 
 body{
     margin: 0;
@@ -53,11 +57,15 @@ body{
     font-family: 'Oswald', sans-serif; 
     font-weight: 500;
     font-size: 21px;
+    letter-spacing: 0.02em;
 }
 
 .text-p{
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .text-p-reviews{
@@ -117,7 +125,14 @@ body{
     max-width: 734px;
     margin: 0 auto 17px;
     color: var(--white-color);
+}
 
+@media screen and (max-width:380px)
+{
+    .h1{
+        font-size: 46px;
+        line-height: 64px;
+    }
 }
 .h4 {
     color: var(--white-color);
@@ -135,6 +150,7 @@ body{
 .about{
     min-height: 1080px;
     position: relative;
+    padding-top: 250px;
 }
 
 .info {
@@ -177,20 +193,291 @@ body{
     font-weight: 500;
 }
 
-/* Разные размеры экрана ждя секции about */
+.project-h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.about__flex {
+    display: flex;
+}
+.about__flex-item {
+    max-width: 350px;
+    margin-right: 30px;
+}
+.about__flex-item:last-child{
+    margin-right: 0;
+}
+
+.project-img{
+    margin-bottom: 45px;
+}
+
+.rectangle {
+    width: 56px;
+    height: 6px;
+    background-color: var(--accent-color);
+    margin-bottom: 15px;
+}
+.project-h3 {
+    color: var(--dark-color);
+    margin-bottom: 13px;
+}
+.project-p {
+    color: var(--gray-color)
+}
+
+/* Разные стили под размеры экрана для секции .about */
 @media screen and (max-width: 1280px){
     .about__grid {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
+    }
+    .about{
+        padding: 450px 15px 110px 15px;
+    }
+
+    .about__flex-item {
+        min-width:auto;
     }
 }
 
 @media screen and (max-width: 768px){
     .info{
         position: relative;
+        padding: 30px 0;
     }
     .about__grid {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(4, 1fr);
+        justify-content: center;
     }
+
+    .about{
+        padding-top: 150px;
+        padding-bottom: 80px;
+    }
+
+    .about__flex{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .about__flex-item{
+        margin-right: 0px;
+        margin-bottom: 30px;
+    }
+    .about__flex-item:last-child{
+        margin-bottom: 0px;
+    }
+}
+
+
+/* Раздел request */
+.request {
+    background-color: var(--accent-color);
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.request__flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.request__flex-left{
+    color: var(--white-color);
+}
+.request__flex-right{
+
+}
+
+.request-h4 {
+    color: var(--white-color);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.96px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+.request-h5 {
+    color: var(--white-color);
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.48px;
+    text-transform: uppercase;
+}
+.request__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 175px;
+    height: 50px;
+    background: #fff;
+    border: none;
+    padding: 14px 30px;
+    margin-top: 20px;
+
+    /* Стили для текста */
+    color: #000;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+}
+.request-logo {
+    margin-right: 15px;
+}
+
+/* Разные стили под размеры экрана для секции .request */
+@media screen and (max-width: 1280px){
+    .request{
+        padding: 0 15px 0 15px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .request__flex{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+/* Раздел services */
+
+.services {
+    padding: 150px 0px;
+}
+.section__h2, .services__h4 {
+    color:#000;
+    text-align: center;
+}
+.section__h2{
+    margin-bottom: 55px;
+}
+.services__h4{
+    margin: 0 auto;
+    max-width: 172px;
+    text-transform: uppercase;
+}
+.services__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+    justify-items: center;
+}
+.services__grid-item {
+    background-color: #f7f7f7;
+    padding: 58px 0;
+    width: 350px;
+}
+.services__icon {
+    margin: 0 auto 23px;
+}
+
+@media screen and (max-width: 1280px){
+    .services{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .services__grid{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .services__grid-item{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .services__grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+/* Секция portfolio */
+
+.portfolio {
+}
+.portfolio__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: 0;
+}
+.portfolio__grid-item {
+}
+.portfolio__img {
+}
+
+@media screen and (max-width: 1280px){
+    .portfolio__grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px){
+    .portfolio__grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Сектия question */
+
+.question {
+    padding-top: 150px;
+    padding-bottom: 110px;
+}
+.question .section__h2 {
+    margin-bottom: 50px;
+}
+.question__items {
+}
+.question__item {
+}
+.question_h3 {
+    text-transform: uppercase;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+.question_p {
+    margin-bottom: 40px;
+    color: var(--gray-color);
+    max-width: 730px;
+}
+
+.question_h3.close{
+    margin-bottom: 33px;
+}
+
+.question_h3.open::before,
+.question_h3.close::before{
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url(../img/question_arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 15px;
+}
+
+.question_h3.open::before{
+    transform: rotate(-90deg);
+}
+
+.question_h3.close + .question_p{
+    display: none;
+}
+
+@media screen and (max-width: 1280px){
+ .question{
+    padding: 150px 15px 110px 15px;
+ }
 }
