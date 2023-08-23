@@ -6,6 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <!-- <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/> -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,20 +21,33 @@
 </head>
 
 <body>
+
+    <!-- Materialize sidenav -->
+    <ul id="slide-out" class="sidenav">
+        <li><a href="#!"><i class="material-icons">home</i>Главная</a></li>
+        <li><a href="#!"><i class="material-icons">people</i>О нас</a></li>
+        <li><a href="#!"><i class="material-icons">grade</i>Услуги</a></li>
+        <li><a href="#!"><i class="material-icons">Phone</i>Контакты</a></li>
+        <li><div class="divider"></div></li>
+        <li><a href="#!" class="sidenav-close"><i class="material-icons">close</i>Зыкрыть</a></li>
+    </ul>
+    <!-- --------- -->
+
     <header class="header">
         <div class="container">
             <div class="header__title">
                 <img src="img/logo.svg" alt="Logo" class = "header__logo">
-                <button class="burger">
+                <a class="burger sidenav-trigger" data-target="slide-out">
                     <span class="burger__line"></span>
                     <span class="burger__line"></span>
                     <span class="burger__line"></span>
-                </button>
+                </a>
             </div>
             <h1 class="h1">Реализуем крупнейшие проекты в России</h1>
             <h4 class="h4">Cтадионы, газопроводы, мосты, дамбы</h4>
         </div>
     </header>
+
     <section class = "about">
         <div class="info">
             <div class="container">
@@ -79,6 +99,16 @@
             </div>
         </div>
     </section>
+
+     <!-- Modal Trigger -->
+     <!-- Modal Structure -->
+     <div id="modal1" class="modal">
+         <div class="modal-content">
+             <h4>Заголовок окна</h4>
+             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga doloribus neque officia quaerat corporis iure nisi impedit ducimus illo vitae vero quas repellat totam labore sint tenetur laudantium, facere odio adipisci sapiente ad, accusantium corrupti ut. Iure itaque alias doloremque adipisci tempora architecto. Blanditiis autem magnam perferendis ut! Consequatur ipsam corrupti nemo dignissimos repellendus distinctio ullam rerum, tenetur ad voluptas voluptates fuga a. Laudantium fuga repudiandae sit omnis culpa provident optio sunt accusamus consequuntur repellat blanditiis facere quia cumque modi officia autem minima aliquam fugiat, inventore sequi quod dolorum! Expedita reiciendis accusamus necessitatibus, ut saepe tempora exercitationem dolor? Iure, repellendus!</p>
+         </div>
+     </div>
+
     <section class="request">
         <div class="container">
             <div class="request__flex">
@@ -87,10 +117,10 @@
                     <h4 class="request-h5">Реализуем самые смелые решения в России!</h4>
                 </div>
                 <div class="request__flex-right">
-                    <button class="request__button">
+                    <a class="request__button modal-trigger" href="#modal1">
                         <img src="img/request-logo.svg" alt="request-logo" class="request-logo">
                         Ваш запрос
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -129,28 +159,28 @@
     <section class="portfolio">
         <div class="portfolio__grid">
             <div class="portfolio__grid-item">
-                <img class="portfolio__img" src="img/portfolio-img.png" alt="portfolioItem">
+                <img class="portfolio__img materialboxed" src="img/portfolio-img.png" alt="portfolioItem">
             </div>
             <div class="portfolio__grid-item">
-                <img class="portfolio__img" src="img/portfolio-img.png" alt="portfolioItem">
+                <img class="portfolio__img materialboxed" src="img/portfolio-img.png" alt="portfolioItem">
             </div>
             <div class="portfolio__grid-item">
-                <img class="portfolio__img" src="img/portfolio-img.png" alt="portfolioItem">
+                <img class="portfolio__img materialboxed" src="img/portfolio-img.png" alt="portfolioItem">
             </div>
             <div class="portfolio__grid-item">
-                <img class="portfolio__img" src="img/portfolio-img.png" alt="portfolioItem">
+                <img class="portfolio__img materialboxed" src="img/portfolio-img.png" alt="portfolioItem">
             </div>
             <div class="portfolio__grid-item">
-                <img class="portfolio__img" src="img/portfolio-img.png" alt="portfolioItem">
+                <img class="portfolio__img materialboxed" src="img/portfolio-img.png" alt="portfolioItem">
             </div>
             <div class="portfolio__grid-item">
-                <img class="portfolio__img" src="img/portfolio-img.png" alt="portfolioItem">
+                <img class="portfolio__img materialboxed" src="img/portfolio-img.png" alt="portfolioItem">
             </div>
             <div class="portfolio__grid-item">
-                <img class="portfolio__img" src="img/portfolio-img.png" alt="portfolioItem">
+                <img class="portfolio__img materialboxed" src="img/portfolio-img.png" alt="portfolioItem">
             </div>
             <div class="portfolio__grid-item">
-                <img class="portfolio__img" src="img/portfolio-img.png" alt="portfolioItem">
+                <img class="portfolio__img materialboxed" src="img/portfolio-img.png" alt="portfolioItem">
             </div>
         </div>
     </section>
@@ -235,10 +265,10 @@
                     <h4 class="request-h5">Оставьте заявку и мы свяжемся с вами!</h4>
                 </div>
                 <div class="request__flex-right">
-                    <button class="request__button">
+                    <a class="request__button modal-trigger" href="#modal1">
                         <img src="img/request-logo.svg" alt="request-logo" class="request-logo">
                         Ваш запрос
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -282,6 +312,8 @@
             </div>
         </div>
     </footer>
-</body>
 
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
 </html>
