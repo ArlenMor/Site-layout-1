@@ -74,6 +74,8 @@ body{
     line-height: 21px;
 }
 
+/* Стили для header */
+
 .header {
     min-height: 740px;
     background-image: url(../img/firstScreenBg.jpg);
@@ -125,6 +127,13 @@ body{
     max-width: 734px;
     margin: 0 auto 17px;
     color: var(--white-color);
+}
+
+@media screen and (max-width: 1280px){
+    .header__title{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 @media screen and (max-width:380px)
@@ -452,29 +461,6 @@ body{
     max-width: 730px;
 }
 
-.question_h3.close{
-    margin-bottom: 33px;
-}
-
-.question_h3.open::before,
-.question_h3.close::before{
-    content: "";
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    background-image: url(../img/question_arrow.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-right: 15px;
-}
-
-.question_h3.open::before{
-    transform: rotate(-90deg);
-}
-
-.question_h3.close + .question_p{
-    display: none;
-}
 
 @media screen and (max-width: 1280px){
  .question{
@@ -597,6 +583,10 @@ body{
     width: 50px;
     height: 50px;
     margin: 0 auto 13px;
+}
+.contacts__h3 a{
+    text-decoration: none;
+    color: inherit;
 }
 .contacts__h3 {
     text-transform: uppercase;
